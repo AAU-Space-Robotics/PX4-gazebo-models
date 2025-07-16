@@ -79,6 +79,7 @@
       <pose>0 0 0 0 -0 0</pose>
       <self_collide>false</self_collide>
     </model>
+    <!-- SUN -->
     <light name="sunUTC" type="directional">
       <pose>0 0 500 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>
@@ -98,19 +99,8 @@
         <falloff>0</falloff>
       </spot>
     </light>
-    <light type="directional" name="sun_2">
-      <cast_shadows>true</cast_shadows>
-      <pose>200 200 200 0 0 0</pose>
-      <diffuse>0.5 0.5 0.5 0.3</diffuse>
-      <specular>0.2 0.2 0.2 0.3</specular>
-      <attenuation>
-        <range>2000</range>
-        <constant>1</constant>
-        <linear>0</linear>
-        <quadratic>0</quadratic>
-      </attenuation>
-      <direction>0.01 0.01 -0.9</direction>
-    </light>
+
+    <!-- Landing box -->
     <model name="landing_box_1">
       <static>true</static>
       <pose>1 0 0 0 0 0</pose>
@@ -295,6 +285,11 @@
         </inertial>
       </link>
     </model>
+
+    <include>
+    <uri>model://x500</uri>
+    <pose>0 0 0.5 0 0 0</pose>
+    </include>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <world_frame_orientation>ENU</world_frame_orientation>
